@@ -132,7 +132,7 @@ fun getOAuthToken(apiKey: String, apiSecret: String): String {
         ClientParametersAuthentication(
             apiKey, apiSecret
         ),
-        apiSecret,
+        apiKey,
         AUTHORIZATION_SERVER_URL
     )
         .setScopes(SCOPE)
