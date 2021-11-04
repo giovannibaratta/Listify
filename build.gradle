@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.31'
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
 }
 
 group 'org.example'
@@ -24,4 +25,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'org.example.MainKt'
+    }
 }
